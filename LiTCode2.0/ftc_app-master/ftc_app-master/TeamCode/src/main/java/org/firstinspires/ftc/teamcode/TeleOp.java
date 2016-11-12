@@ -67,7 +67,7 @@ public class TeleOp extends OpMode
         /*boolean flyWheelPressed = gamepad2.right_bumper;
         if (flyWheelPressed)
         {
-            flywheel.setPower(-1);
+            flywheel.setPower(1);
         }
         else
         {
