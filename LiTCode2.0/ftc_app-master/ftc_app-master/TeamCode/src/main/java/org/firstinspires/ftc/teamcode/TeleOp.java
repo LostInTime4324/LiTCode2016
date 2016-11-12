@@ -1,5 +1,5 @@
 package org.firstinspires.ftc.teamcode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import org.firstinspires.ftc.teamcode.Devices.DriveSystem;
 import org.firstinspires.ftc.teamcode.Devices.FlyWheelMechanic;
@@ -54,6 +54,9 @@ public class TeleOp extends OpMode
         if (rightJoystick > 0.05 || rightJoystick < -0.05)
         {
             drive.setRight(rightJoystick);
+        }
+        else {
+            drive.setRight(0);
         }
 
 
