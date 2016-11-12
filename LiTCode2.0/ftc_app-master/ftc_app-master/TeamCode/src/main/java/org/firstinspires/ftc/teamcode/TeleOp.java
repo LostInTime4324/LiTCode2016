@@ -20,7 +20,7 @@ public class TeleOp extends OpMode
 
     //  public FlyWheelMechanic flywheel;
 
-//    public SweeperMechanic sweeper;
+        public SweeperMechanic sweeper;
 
 //    public TrapDoorMechanic trapdoor;
 
@@ -31,7 +31,7 @@ public class TeleOp extends OpMode
     public void init()
     {
       //  flywheel = new FlyWheelMechanic(hardwareMap);
-      //  sweeper = new SweeperMechanic(hardwareMap);
+        sweeper = new SweeperMechanic(hardwareMap);
      //   trapdoor = new TrapDoorMechanic(hardwareMap);
         drive = new DriveSystem(hardwareMap);
     }
@@ -66,26 +66,34 @@ public class TeleOp extends OpMode
 
 
         /// flywheel
-    /*    boolean flyWheelPressed = gamepad1.right_bumper;
+        /*boolean flyWheelPressed = gamepad2.right_bumper;
         if (flyWheelPressed)
         {
             flywheel.setPower(-1);
         }
         else
         {
-            flywheel.setPower(1);
+            flywheel.setPower(0);
         }
-
-        boolean sweeperPressedDown = gamepad2.dpad_down;
+        */
+        boolean sweeperPressedDown = gamepad1.dpad_down;
         if (sweeperPressedDown)
+        {
+            sweeper.setPower(-1);
+        }
+        else
+        {
+            sweeper.setPower(0);
+        }
+        boolean sweeperPressedUp = gamepad1.dpad_up;
+        if (sweeperPressedUp)
         {
             sweeper.setPower(1);
         }
         else
         {
-            sweeper.setPower(-1);
+            sweeper.setPower(0);
         }
-    */
 
     }
 }
