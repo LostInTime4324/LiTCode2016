@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 public class SweeperMechanic
 {
-    private static DcMotor[] axelRotation = null;
+    private static DcMotor[] axelRotation;
 
     public SweeperMechanic(HardwareMap hardwareMap)
     {
