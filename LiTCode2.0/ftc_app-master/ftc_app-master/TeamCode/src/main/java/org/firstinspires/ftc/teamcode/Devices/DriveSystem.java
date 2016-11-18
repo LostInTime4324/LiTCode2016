@@ -15,7 +15,6 @@ public class DriveSystem
         leftMotors[0] = hardwareMap.dcMotor.get("frontLeftDriveMotor");
         leftMotors[1] = hardwareMap.dcMotor.get("backLeftDriveMotor");
 
-        //TODO Test differences between having setDirection and not.
         leftMotors[0].setDirection(DcMotorSimple.Direction.REVERSE);
         leftMotors[1].setDirection(DcMotorSimple.Direction.REVERSE);
 
@@ -23,8 +22,6 @@ public class DriveSystem
         rightMotors[0] = hardwareMap.dcMotor.get("frontRightDriveMotor");
         rightMotors[1] = hardwareMap.dcMotor.get("backRightDriveMotor");
 
-
-        //TODO Test differences between having setDirection and not.
         rightMotors[0].setDirection(DcMotorSimple.Direction.FORWARD);
         rightMotors[1].setDirection(DcMotorSimple.Direction.FORWARD);
 
@@ -35,7 +32,8 @@ public class DriveSystem
     {
         double convertedPower = (power);
         // for each motor in leftMotors
-        for (DcMotor motor : leftMotors) {
+        for (DcMotor motor : leftMotors)
+        {
             // Set the motor power to power
             motor.setPower(convertedPower);
         }
@@ -46,7 +44,8 @@ public class DriveSystem
     {
         double convertedPower = (power);
         // for each motor in RightMotors
-        for (DcMotor motor : rightMotors) {
+        for (DcMotor motor : rightMotors)
+        {
             // Set the motor power to power
             motor.setPower(convertedPower);
         }
