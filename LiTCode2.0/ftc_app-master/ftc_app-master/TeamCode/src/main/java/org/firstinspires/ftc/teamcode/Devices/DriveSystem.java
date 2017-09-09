@@ -26,7 +26,7 @@ public class DriveSystem
         rightMotors[1].setDirection(DcMotorSimple.Direction.FORWARD);
 
     }
-
+    // Follow K T Spin on Sound Cloud
     // Sets power of the two left motors
     public synchronized void setLeft(double power)
     {
